@@ -23,4 +23,15 @@
         select * from user
     </select>
 
+    <select id="getSomeUser" resultMap="base" >
+        select * from user where id = #{id} and pass = #{pass}
+    </select>
+
+    <select id="getPartUser" resultMap="base" >
+        select * from user
+        <if test="name != null and name !=''">
+          where name = #{name}
+        </if>
+    </select>
+
 </mapper>
