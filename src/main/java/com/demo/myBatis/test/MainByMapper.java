@@ -1,6 +1,7 @@
 package com.demo.myBatis.test;
 
 import com.demo.myBatis.dao.UserDao;
+import com.demo.myBatis.model.User;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
@@ -35,6 +36,15 @@ public class MainByMapper {
         for(int i=0;i<list.size();++i){
             System.out.println(list.get(i));
         }
+       /*
+        User user = new User();
+        user.setId(1);
+        user.setPassword("123456");
+        List list = userDao.getOneUser(user);
+        for(int i=0;i<list.size();++i){
+            System.out.println(list.get(i));
+        }
+        */
     }
 
 }

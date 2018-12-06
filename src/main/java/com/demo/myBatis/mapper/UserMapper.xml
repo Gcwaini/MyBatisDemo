@@ -24,7 +24,7 @@
     </select>
 
     <select id="getSomeUser" resultMap="base" >
-        select * from user where id = #{id} and pass = #{pass}
+        select * from user where id = #{id} and pass = #{password}
     </select>
 
     <select id="getPartUser" resultMap="base" >
@@ -32,6 +32,10 @@
         <if test="name != null and name !=''">
           where name = #{name}
         </if>
+    </select>
+
+    <select id="getOneUser" resultMap="base">
+        select * from user where id = #{user.id} and pass = #{user.password}
     </select>
 
 </mapper>
